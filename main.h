@@ -23,9 +23,10 @@ typedef struct printer
 /* FUNCTIONS */
 int _printf(const char *format, ...);
 
-int print_c(va_list a_ptr, char format[]);
-int print_s(va_list a_ptr, char format[]);
-int print_percent(va_list a_ptr, char format[]);
+int print_c(va_list a_ptr, char buffer[]);
+int print_s(va_list a_ptr, char buffer[]);
+int print_percent(va_list a_ptr, char buffer[]);
+int print_d(va_list a_ptr, char buffer[]);
 
 int _strlen(char *string);
 void print_buffer(char buffer[], int *size);
