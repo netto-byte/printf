@@ -14,7 +14,8 @@ int get_printers(const char *format, int fmt_i, va_list a_ptr, char buffer[])
 	print_t select[] = {
 		{'c', print_c}, {'s', print_s},
 		{'%', print_percent}, {'d', print_d},
-		{'i', print_d}, {'\0', NULL}
+		{'i', print_d}, {'b', print_b},
+		{'\0', NULL}
 	};
 	int i, count;
 
