@@ -10,11 +10,9 @@
  */
 int print_c(va_list a_ptr, char buffer[])
 {
-	int i = BUF_SIZE - 2;
 	char c = va_arg(a_ptr, int);
 
-	buffer[BUF_SIZE -1] = '\0';
-	buffer[i] = c;
+	(void)buffer;
 
-	return (write(1, &buffer[i], 1));
+	return (write(1, &c, 1));
 }
