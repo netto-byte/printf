@@ -34,6 +34,8 @@ int print_x(va_list a_ptr, char buffer[]);
 int print_X(va_list a_ptr, char buffer[]);
 int print_S(va_list a_ptr, char buffer[]);
 int print_p(va_list a_ptr, char buffer[]);
+int print_r(va_list a_ptr, char buffer[]);
+int print_R(va_list a_ptr, char buffer[]);
 
 int _strlen(char *string);
 void print_buffer(char buffer[], int *size);
