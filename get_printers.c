@@ -31,7 +31,7 @@ int get_printers(const char *format, int fmt_i, va_list a_ptr, char buffer[])
 
 		count += write(1, "%%", 1);
 		if (format[i - 1] == ' ')
-			count += write(1, "  ", 1);
+			count += write(1, " ", 1);
 		count += write(1, &format[i], 1);
 		return (count);
 	}
