@@ -18,17 +18,17 @@ int print_d(va_list a_ptr, char buffer[])
 	n = (int)num;
 	if (n == 0)
 		buffer[i--] = '0';
-	num = (unsigned long)n;
+	num = (unsigned long int)n;
 	if (num < 0)
 	{
 		flag = 1;
-		n = (unsigned long)(n * -1);
+		num = (unsigned long int)((-1) * n);
 	}
 
-	while (n > 0)
+	while (num > 0)
 	{
-		buffer[i--] = '0' + (n % 10);
-		n /= 10;
+		buffer[i--] = '0' + (num % 10);
+		num /= 10;
 		count++;
 	}
 	if (flag == 1)
