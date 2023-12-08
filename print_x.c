@@ -22,6 +22,7 @@ int print_x(va_list a_ptr, char buffer[])
 		buffer[i--] = lowerHex[hex % 16];
 		hex /= 16;
 	}
+	i++;
 
 	for (p = i; buffer[p]; p++)
 		count += write(1, &buffer[p], 1);
