@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_h - Prints a base 10 value in base 16 (lowercase)
+ * print_x - Prints a base 10 value in base 16 (lowercase)
  * @a_ptr: An argument pointer
  * @buffer: Buffer for formatting
  *
