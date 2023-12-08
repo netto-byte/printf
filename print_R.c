@@ -12,13 +12,13 @@ int print_R(va_list a_ptr, char buffer[])
 	char *from = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *to = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *str = va_arg(a_ptr, char *);
-	int i = 0, j = 0, k = 0, count = 0;
+	int i, j, k = 0, count = 0;
 
 	if (str == NULL)
 		return (write(1, "(AHYY)", 6));
-	while (str[i])
+	for (i = 0; str[i]; i++, j++;)
 	{
-		for (; from[j]; j++)
+		for (j = 0; from[j]; j++)
 		{
 			if (str[i] == from[j])
 			{
@@ -28,8 +28,6 @@ int print_R(va_list a_ptr, char buffer[])
 		}
 		if (from[j] == '\0')
 			buffer[k++] = str[i];
-		i++;
-		j++;
 	}
 	buffer[k] = '\0';
 
