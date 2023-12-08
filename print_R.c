@@ -25,7 +25,7 @@ int print_R(va_list a_ptr, char buffer[])
 				buffer[k++] = to[j];
 				break;
 			}
-			if (!from[j])
+			if (from[j] == '\0')
 				buffer[k++] = str[i];
 		}
 		i++;
