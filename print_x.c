@@ -11,7 +11,7 @@ int print_x(va_list a_ptr, char buffer[])
 {
 	unsigned int hex = va_arg(a_ptr, unsigned int);
 	int i = BUF_SIZE - 2, count = 0, p;
-	char lowerHex[] = "0123789abcdef";
+	char lowerHex[] = "0123456789abcdef";
 
 	buffer[BUF_SIZE - 1] = '\0';
 
