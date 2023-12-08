@@ -18,6 +18,7 @@ int get_printers(const char *format, int fmt_i, va_list a_ptr, char buffer[])
 		{'u', print_u}, {'o', print_o},
 		{'x', print_x}, {'X', print_X},
 		{'S', print_S}, {'p', print_p},
+		{'r', print_r}, {'R', print_R},
 		{'\0', NULL}
 	};
 	int i, count;
