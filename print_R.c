@@ -16,7 +16,7 @@ int print_R(va_list a_ptr, char buffer[])
 
 	if (str == NULL)
 		return (write(1, "(AHYY)", 6));
-	for (i = 0; str[i]; i++, j++;)
+	for (i = 0; str[i]; i++, j++)
 	{
 		for (j = 0; from[j]; j++)
 		{
