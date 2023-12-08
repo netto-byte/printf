@@ -18,7 +18,7 @@ int print_p(va_list a_ptr, char buffer[])
 
 	if (ptr == NULL)
 		return (write(1, "(nil)", 5));
-	address = (unsigned int)ptr;
+	address = (unsigned long)ptr;
 	while (address > 0)
 	{
 		buffer[i--] = hex[address % 16];
