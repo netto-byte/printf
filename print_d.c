@@ -9,25 +9,29 @@
  */
 int print_d(va_list a_ptr, char buffer[])
 {
-	int num, i, flag = 0, count = 0;
+	int i = BUF_SIZE - 2, count = 0, flag = 0;
+	long int num = va_arg(a_ptr, long int);
+	unsigned long n;
 
-	num = va_arg(a_ptr, int);
+	buffer[BUF_SIZE - 1] = '\0';
 
+	n = (int)num;
+	if (n == 0)
+		buffer[i--] = '0';
+	num = (unsigned long)n;
 	if (num < 0)
 	{
 		flag = 1;
-		num *= -1;
+		n = (unsigned long)(n * -1);
 	}
 
-	buffer[BUF_SIZE - 1] = '\0';
-	i = BUF_SIZE - 2;
-	while (num > 0)
+	while (n > 0)
 	{
-		buffer[i--] = '0' + (num % 10);
-		num /= 10;
+		buffer[i--] = '0' + (n % 10);
+		n /= 10;
 		count++;
 	}
-	if (flag)
+	if (flag == 1)
 		buffer[i--] = '-', count++;
 	i++;
 
